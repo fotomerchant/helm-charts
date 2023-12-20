@@ -1,0 +1,43 @@
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: RunnerDeployment
+metadata:
+  name: eks-arc-runners
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
+spec:
+  replicas: 3
+  template:
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: runner-deployment-name
+                operator: In
+                values:
+                - eks-arc-runners
+            topologyKey: "kubernetes.io/hostname"
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                - key: "kubernetes.io/arch"
+                  operator: In
+                  values: ["arm64"]
+      organization: fotomerchant
+      labels:
+        - runners
+---
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: HorizontalRunnerAutoscaler
+metadata:
+  name: eks-arc-runners-deployment-autoscaler
+spec:
+  scaleTargetRef:
+    name: eks-arc-runners
+  minReplicas: 3
+  maxReplicas: 3
+  scaleUpTriggers:
+  - githubEvent: {}
+    duration: "1m"
