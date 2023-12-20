@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  karpenter:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2023-12-20T02:01:53.519233258Z"
+    dependencies:
+    - name: karpenter
+      repository: oci://public.ecr.aws/karpenter
+      version: v0.22.1
+    description: A Helm chart for Karpenter Autoscaler
+    digest: 5c141e710c401f44cd9089a4fa44792f012a268342ae1c9dd6487bed28231754
+    name: karpenter
+    type: application
+    urls:
+    - https://github.com/fotomerchant/helm-charts/releases/download/karpenter-0.4.0/karpenter-0.4.0.tgz
+    version: 0.4.0
+generated: "2023-12-20T02:01:53.519244358Z"
