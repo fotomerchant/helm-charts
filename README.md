@@ -3,8 +3,6 @@ A collection of helm charts and helm chart enhancements which are consumed by th
 
 This includes GitHub Actions runner controller with configuration for runners & Karpenter.
 
-
-
 # architecture
 This repository is based off the chart-releaser action to build & publish a GitHub repo into an 
 
