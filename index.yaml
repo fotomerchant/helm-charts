@@ -15,4 +15,19 @@ entries:
     urls:
     - https://github.com/fotomerchant/helm-charts/releases/download/karpenter-0.4.0/karpenter-0.4.0.tgz
     version: 0.4.0
-generated: "2023-12-20T02:01:53.519244358Z"
+  karpenter2:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2023-12-21T03:56:26.959816797Z"
+    dependencies:
+    - name: karpenter
+      repository: oci://public.ecr.aws/karpenter
+      version: v0.22.1
+    description: A Helm chart for Karpenter Autoscaler2
+    digest: 1c0bf21a5d1c842186a692eb3f66ec7f318c5e961579f745571aced009b9622d
+    name: karpenter2
+    type: application
+    urls:
+    - https://github.com/fotomerchant/helm-charts/releases/download/karpenter2-0.4.0/karpenter2-0.4.0.tgz
+    version: 0.4.0
+generated: "2023-12-21T03:56:26.959834197Z"
