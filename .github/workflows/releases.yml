@@ -31,4 +31,5 @@ jobs:
         with:
           charts_dir: charts
           config: cr.yaml
-          token: "${{ secrets.GITHUB_TOKEN }}"
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
