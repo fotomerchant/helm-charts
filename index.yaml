@@ -3,6 +3,20 @@ entries:
   actions-runner-controller:
   - apiVersion: v2
     appVersion: 0.23.7
+    created: "2024-01-02T21:24:27.52199021Z"
+    dependencies:
+    - name: actions-runner-controller
+      repository: https://actions-runner-controller.github.io/actions-runner-controller
+      version: 0.23.7
+    description: A Helm chart for installing ARC
+    digest: fbc7ee2b9db5052ad62800542f96404711f7c297e301dc72a8b6dd76f0e505f0
+    name: actions-runner-controller
+    type: application
+    urls:
+    - https://github.com/fotomerchant/helm-charts/releases/download/actions-runner-controller-0.1.1/actions-runner-controller-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.23.7
     created: "2023-12-21T04:04:53.929792746Z"
     dependencies:
     - name: actions-runner-controller
@@ -45,4 +59,4 @@ entries:
     urls:
     - https://github.com/fotomerchant/helm-charts/releases/download/karpenter2-0.4.0/karpenter2-0.4.0.tgz
     version: 0.4.0
-generated: "2023-12-21T04:04:53.929803246Z"
+generated: "2024-01-02T21:24:27.522019712Z"
